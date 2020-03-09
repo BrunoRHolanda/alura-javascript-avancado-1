@@ -9,6 +9,8 @@
   <body class="container">
     <h1 class="text-center">Negociações</h1>
 
+    <div id="mensagem"></div>
+
     <form class="form">
       <div class="form-group">
         <label for="data">Data</label>
@@ -41,7 +43,7 @@
         />
       </div>
 
-      <button class="btn btn-primary" type="submit">Incluir</button>
+      <button class="btn btn-primary" type="submit" onclick="negociacaoController.adicionar(event)">Incluir</button>
     </form>
 
     <div class="text-center">
@@ -54,29 +56,18 @@
     </div>
     <br />
     <br />
-
-    <table class="table table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>DATA</th>
-          <th>QUANTIDADE</th>
-          <th>VALOR</th>
-          <th>VOLUME</th>
-        </tr>
-      </thead>
-
-      <tbody></tbody>
-
-      <tfoot></tfoot>
-    </table>
+    <div id="negociacoesView"></div>
+    
+    <script src="js/app/models/Mensagem.js"></script>
     <script src="js/app/models/Negociacao.js"></script>
+    <script src="js/app/models/ListaNegociacoes.js"></script>
+    <script src="js/app/helpers/DateHelper.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/NegociacaoView.js"></script>
+    <script src="js/app/views/MensagemView.js"></script>
+    <script src="js/app/controllers/NegociacaoController.js"></script>
     <script>
-        var n1 = new Negociacao(new Date(), 5, 200);
-        console.log(n1);
-        console.log(n1.volume);
-        console.log(n1.data);
-        console.log(n1.valor);
-        console.log(n1.quantidade);
+      let negociacaoController = new NegociacaoController();
     </script>
   </body>
 </html>
