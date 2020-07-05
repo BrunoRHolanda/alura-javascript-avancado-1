@@ -47,10 +47,7 @@
     </form>
 
     <div class="text-center">
-      <button class="btn btn-primary text-center" type="button">
-        Importar Negociações
-      </button>
-      <button class="btn btn-primary text-center" type="button">
+      <button class="btn btn-primary text-center" type="button" onclick="negociacaoController.apagar(event)">
         Apagar
       </button>
     </div>
@@ -58,6 +55,8 @@
     <br />
     <div id="negociacoesView"></div>
     
+    <script src="js/app/polyfill/es6.js"></script>
+    <script src="js/app/polyfill/fetch.js"></script>
     <script src="js/app/models/Mensagem.js"></script>
     <script src="js/app/models/Negociacao.js"></script>
     <script src="js/app/models/ListaNegociacoes.js"></script>
@@ -66,6 +65,11 @@
     <script src="js/app/views/NegociacaoView.js"></script>
     <script src="js/app/views/MensagemView.js"></script>
     <script src="js/app/controllers/NegociacaoController.js"></script>
+    <script src="js/app/services/ProxyFactory.js"></script>
+    <script src="js/app/services/NegociacaoService.js"></script>
+    <script src="js/app/services/HttpService.js"></script>
+    <script src="js/app/services/ConnectionFactory.js"></script>
+    <script src="js/app/dao/NegociacaoDao.js"></script>
     <script>
       let negociacaoController = new NegociacaoController();
     </script>
