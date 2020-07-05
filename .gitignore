@@ -1,5 +1,5 @@
-./client/node_modules
-./server/node_modules
+client/node_modules
+server/node_modules
 
-./client/package-look.json
-./server/package-look.json
+client/package-lock.json
+server/package-lock.json
